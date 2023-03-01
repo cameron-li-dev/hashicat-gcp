@@ -8,7 +8,7 @@ module "vpc" {
 
     subnets = [
       {
-          subnet_name   = "gaurav-subnet"
+          subnet_name   = "hashi-cat"
           subnet_ip     = "10.100.10.0/24"
           subnet_region = var.region
       }
@@ -39,7 +39,7 @@ module "vpc" {
             destination_range      = "10.50.10.0/24"
             tags                   = "app-proxy"
             next_hop_instance      = "app-proxy-instance"
-            next_hop_instance_zone = "australia-southeast1-a"
+            next_hop_instance_zone = "us-west1-a"
         },
     ]
 }
